@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Awareness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>City Times</h1>
+    <p>Your Source for Local News</p>
+</header>
+
+<section>
+    <h2>City Park Renovation Project Kicks Off</h2>
+    <p><strong>Mumbai</strong></p>
+    <p><strong>Date:</strong> October 5, 2024</p>
+    <p id="cityParkSummary">
+        The long-awaited renovation of City Park has officially begun, promising to revitalize the beloved green space in the heart of downtown.
+    </p>
+    <p id="cityParkDetails" style="display: none;">
+        The project aims to enhance recreational facilities, improve landscaping, and add more seating areas for residents and visitors. City officials gathered for a groundbreaking ceremony last Friday, with Mayor Jane Smith highlighting the importance of public parks for community well-being.
+    </p>
+    <button id="toggleCityParkDetails">Show More</button>
+</section>
+
+<header>
+    <h1>Indian Express</h1>
+</header>    
+
+<section>
+    <h2>Maharashtra govt invites suggestions from public on students’ safety plan</h2>
+    <p><strong>Mumbai</strong></p>
+    <p><strong>Date:</strong> October 5, 2024</p>
+    <p id="studentSafetySummary">
+        In August this year, the Bombay High Court took suo motu cognizance of the sexual assault of two minors at a school in Badlapur.
+    </p>
+    <img src="file:///C:/Users/SOHAM/Downloads/Student-safety.avif" width="300" style="vertical-align: middle;">
+    <p id="studentSafetyDetails" style="display: none;">
+        The Maharashtra government has invited suggestions from the public on the comprehensive students’ safety plan that it has been asked to prepare. A link to an online form has been released for the public to record their suggestions about students’ safety.
+    In August this year, the Bombay High Court took suo motu cognizance of the sexual assault of two minors at a school in Badlapur. According to the court’s guidelines, a committee is to be formed to provide recommendations for effective implementation of safety measures in schools across Maharashtra. The committee, formed in September, has been asked to submit the report within two months. In the meeting held by the committee on October 1, it was decided to involve the public to recommend measures for students’ safety.
+
+
+</p>
+    <button id="toggleStudentSafetyDetails">Show More</button>
+</section>
+
+<script>
+  
+    const cityParkBtn = document.getElementById("toggleCityParkDetails");
+    const cityParkDetails = document.getElementById("cityParkDetails");
+    cityParkBtn.addEventListener("click", () => {
+        if (cityParkDetails.style.display === "none") {
+            cityParkDetails.style.display = "block";
+            cityParkBtn.textContent = "Show Less";
+        } else {
+            cityParkDetails.style.display = "none";
+            cityParkBtn.textContent = "Show More";
+        }
+    });
+
+    
+    const studentSafetyBtn = document.getElementById("toggleStudentSafetyDetails");
+    const studentSafetyDetails = document.getElementById("studentSafetyDetails");
+    studentSafetyBtn.addEventListener("click", () => {
+        if (studentSafetyDetails.style.display === "none") {
+            studentSafetyDetails.style.display = "block";
+            studentSafetyBtn.textContent = "Show Less";
+        } else {
+            studentSafetyDetails.style.display = "none";
+            studentSafetyBtn.textContent = "Show More";
+        }
+    });
+</script>
+
+</body>
+</html>
